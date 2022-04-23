@@ -13,7 +13,7 @@ pacman::p_load(quantmod,plyr,yuima,corrplot)
 ## BlackRock and its competitors through correlation matrix calculation 
 ## and the lead-lag estimation.
 
-## create environment to load data into
+## create environment to load data
 data.env <- new.env()
 
 

@@ -10,7 +10,7 @@ pacman::p_load(quantmod,tseries,sde,dtw,proxy,rgl)
 ## draw the main features of the Johnson & Johnson’s 
 ## stock exchange compared with its main competitors.
 
-## create environment to load data into
+## create environment to load data
 DataEnv <- new.env()
 
 ## To build the framework, a time series of daily closing quotes,
