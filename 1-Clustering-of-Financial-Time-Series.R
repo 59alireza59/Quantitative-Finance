@@ -1,7 +1,7 @@
 # CLUSTERING OF FINANCIAL TIME SERIES
 
-# install.packages("pacman")
-# 1) Load required packages at once
+## install.packages("pacman")
+## Load required packages at once
 library(pacman)
 pacman::p_load(quantmod,tseries,sde,dtw,proxy,rgl)
 
@@ -10,7 +10,7 @@ pacman::p_load(quantmod,tseries,sde,dtw,proxy,rgl)
 ## draw the main features of the Johnson & Johnson’s 
 ## stock exchange compared with its main competitors.
 
-# create environment to load data into
+## create environment to load data into
 DataEnv <- new.env()
 
 ## To build the framework, a time series of daily closing quotes,
@@ -66,7 +66,7 @@ D_MO
 N<-dim(Series)[1]
 nSeries<-dim(Series)[2]
 
-# Euclidean Distance
+### Euclidean Distance
 D_initial <- matrix(0,nSeries,nSeries)
 for(i in 1:(nSeries - 1))
   for(j in (i+1):nSeries){
@@ -80,7 +80,7 @@ D_initial
 D_E <- matrix(0, nSeries, nSeries)
 DELTA <- deltat(Series)
 
-# Short Time Series (STS) Distance
+### Short Time Series (STS) Distance
 for(i in 1:(nSeries - 1)){
   for(j in (i+1):nSeries){
     D_E[i,j] <- sqrt(sum((diff(Series[,i])/DELTA - diff(Series[,j])/DELTA)^2))
@@ -93,12 +93,12 @@ colnames(D_E) <- colnames(Series)
 rownames(D_E) <- colnames(Series)
 D_E
 
-# Dynamic Time Warping (DTW) Distance
+### Dynamic Time Warping (DTW) Distance
 D_DTW <- dist(t(Series),method="dtw")
 D_DTW <- D_DTW/max(D_DTW)
 
 
-# Perform cluster Analysis through dendograms
+### Perform cluster Analysis through dendograms
 par(mfrow=c(2,2)); par(mar=c(1,3,3,0))
 cl <- hclust(as.dist(D_MO))
 plot(cl,main="Markov Operator Distance",xlab="")
@@ -109,7 +109,7 @@ plot(cl2, main="STS Distance",xlab="",ylim=c(0,1))
 cl3 <- hclust(as.dist(D_DTW))
 plot(cl3, main="DTW Distance",xlab="",ylim=c(0,1))
 
-# Plot dendogram of the assets clustered under the Markov Operator distance
+## Plot dendogram of the assets clustered under the Markov Operator distance
 clu <- hclust(D_MO)
 plot(clu, main="Markov Operator Distance",ylim=c(-1,1))
 rect.hclust(cl, k=3, which=c(), border="blue")
