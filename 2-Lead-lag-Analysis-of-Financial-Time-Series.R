@@ -30,7 +30,7 @@ l_ply(stocks, function(sym) try(getSymbols(sym,env=data.env),silent=T))
 ## Drop all "bad" tickers
 stocks <- stocks[stocks %in% ls(data.env)]
 
-## Merge our good stocks by collecting all the good stock xts() objects
+## Merge the good stocks by collecting all the good stock xts() objects
 market.data <- xts()
 for(i in seq_along(stocks)) {
   symbol <- stocks[i]
