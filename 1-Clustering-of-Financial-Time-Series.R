@@ -5,14 +5,17 @@
 library(pacman)
 pacman::p_load(quantmod,tseries,sde,dtw,proxy,rgl)
 
+################################################################################
 ## Cluster Analysis of Johnson and Johnson stock:
 ## This task propounds a clustering framework to 
 ## draw the main features of the Johnson & Johnson’s 
 ## stock exchange compared with its main competitors.
+################################################################################
 
 ## create environment to load data
 DataEnv <- new.env()
 
+################################################################################
 ## To build the framework, a time series of daily closing quotes,
 ## from yahoo finance for two different sectors: 
 ## Pharmaceutical/Healthcare/Biotechnology sector and Banking Services,
@@ -24,6 +27,7 @@ DataEnv <- new.env()
 ## GlaxoSmithKline (GSK); Merck & Co. (MRK);
 ## Viatris Inc. (VTRS); JP Morgan (JPM);
 ## HSBC Holding (HSBC); and Nomura (NMR).
+################################################################################
 
 ## Load data and Show the historical stock chart
 Symbols <- c("PFE","NVS","TEVA","AMGN","SNY","GSK","MRK",

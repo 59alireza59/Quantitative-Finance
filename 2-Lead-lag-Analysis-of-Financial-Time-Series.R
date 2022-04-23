@@ -5,6 +5,7 @@
 library(pacman)
 pacman::p_load(quantmod,plyr,yuima,corrplot)
 
+################################################################################
 ## The lead–lag effect illustrates how the lagger price process 
 ## tends to emulate the oscillations of the leader price process 
 ## relatively with some temporary delay, or vice versa. 
@@ -12,6 +13,7 @@ pacman::p_load(quantmod,plyr,yuima,corrplot)
 ## an American global investment management corporation so-called 
 ## BlackRock and its competitors through correlation matrix calculation 
 ## and the lead-lag estimation.
+################################################################################
 
 ## create environment to load data
 data.env <- new.env()
