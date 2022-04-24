@@ -13,13 +13,10 @@
 ## ING Groep (INGA.AS).
 ################################################################################
 
-library(plyr)
-library(quantmod)
-require(e1071)
-library(tseries)
-library(TTR)
-library(fGarch)
-
+## install.packages("pacman")
+## Load required packages at once
+library(pacman)
+pacman::p_load(quantmod,plyr,e1071,tseries,TTR,fGarch)
 
 ## Check Normality of Log-returns using Geometric Brownian Motion concept:
 
