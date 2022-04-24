@@ -12,13 +12,7 @@
 library(pacman)
 pacman::p_load(quantmod,yuima,sde,fOptions)
 
-library(quantmod)
-library(yuima)
-library(sde)
-library(fOptions)
-
 ## Check (in)dependency of the log returns through correlation analysis
-
 
 ## Load Data from Yahoo Finance and make data preparation
 getSymbols("WFC", from="2014-01-01")
