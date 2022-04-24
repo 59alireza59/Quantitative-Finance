@@ -169,3 +169,24 @@ start <- list(alpha=1, mu=m, sigma=sigma)
 fit <- qmle(yuima, start=start)
 summary(fit)
 
+fit1 <- qmle(yuima1, start=start)
+summary(fit1)
+
+fit2 <- qmle(yuima2, start=start)
+summary(fit2)
+
+## Display multiple change point analysis graph
+
+plot(s, xlab="TIME", ylab="PRICE", main="CHANGE POINT ANALYSIS")
+
+cpoint(s1) # 2014-04-15
+cpoint(s2) # 2015-08-19
+abline(v=cpoint(s1), col="green",lwd=2)
+abline(v=cpoint(s2), col="red",lwd=2)
+abline(v=cpoint(s), col="blue",lwd=2)
+
+getSymbols("WFC", from="2014-10-06", to="2015-08-18")
+s3<-zoo(WFC$WFC.Adjusted)
+cpoint(s3) # 2015-03-12 
+abline(v=cpoint(s3), col="blue",lwd=2)
+
