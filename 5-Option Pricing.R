@@ -21,7 +21,7 @@ library(fOptions)
 
 ## Perform Changing Point Analysis with Black and Scholes formula:
 
-## ## See the of history of stock quotes
+## ## See the of history of stock quotes from yahoo finance
 CP1 <- get.hist.quote("JNJ",start="2014-01-01", end = "2015-05-05")
 CP1 <- CP1$Close
 cpoint(CP1)
