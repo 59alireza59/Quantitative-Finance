@@ -1,11 +1,13 @@
 # OPTION PRICING
 
+################################################################################
 ## This task represents a framework to compute option price 
 ## using Black and Scholes formula and Monte Carlo simulation 
 ## in which the first step requirement is to apply Changing Point Analysis
 ## over a rich financial time series dataset from Yahoo Finance (Johnson &
 ## Johnson stock prices). The changing point analysis helps to find when 
 ## volatility changes in data with respect to the length of time considered.
+################################################################################
 
 ## install.packages("pacman")
 ## Load required packages at once
@@ -17,7 +19,9 @@ library(tseries)
 library(sde)
 library(fOptions)
 
-## Changing Point Analysis
+## Perform Changing Point Analysis with Black and Scholes formula:
+
+## ## See the of history of stock quotes
 CP1 <- get.hist.quote("JNJ",start="2014-01-01", end = "2015-05-05")
 CP1 <- CP1$Close
 cpoint(CP1)
@@ -40,9 +44,9 @@ abline(v=cpoint(CP2)$tau0,lty=3,col="red")
 abline(v=cpoint(CP3)$tau0,lty=3,col="blue")
 abline(v=cpoint(CP4)$tau0,lty=3,col="black")
 
-## Pricing with Black and Scholes formula / GBM
+## Calculate price option using Black and Scholes formula / GBM
 
-## Load and Prepare Data
+## ## Load and Prepare Data
 getSymbols("JNJ",from="2014-09-30",to="2015-05-05")
 S <- JNJ$JNJ.Close
 plot(S,main="JNJ.Adjusted")
@@ -50,7 +54,7 @@ X <- diff(log(S))
 X <- na.omit(X)
 plot(X,main="JNJ.Return")
 
-## Black and Scholes Formulation
+## Build Parameters of the Black and Scholes Formulation
 Delta <- 1/252
 alpha.hat <- mean(X,na.rm=TRUE)/Delta
 sigma.hat <- sqrt(var(X,na.rm=TRUE)/Delta)
@@ -113,7 +117,6 @@ abline(v = S0, lty = 3, col = "blue")
 abline(h = sigma.hat, lty = 3, col = "red")
 axis(2, sigma.hat, expression(hat(sigma)), col = "red")
 
-## Monte Carlo Method Option Pricing
 
 ## Make Monte Carlo Price
 S0 <- 99.50
