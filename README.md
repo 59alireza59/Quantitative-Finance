@@ -7,10 +7,16 @@ This work programs an application of option pricing theory to real data computin
 This platform is programmed to demonstrate in practice which statistical concept can be developed for which part of financial market analysis:
 
 1- Time Series Clustering
+
 2- Lead–lag Effect
+
 3- Black–Scholes Test
+
 4- Change Point Detection
+
 5- Option Pricing
+
 6- Monte Carlo Method
+
 7- Levy Market Process
 
