@@ -154,8 +154,8 @@ p0 # 0 # B&S expected payoff
 ## Compare these quantities:
 levy.price <- sapply(sims, f)
 
-plot(density(levy.price),xlim=c(-5,10), main="Density Levy Price") # Lévy payoff (red line), GBM payoff (blue line) 
-                                                                   # with respect to the null real payoff.
+## Plot Lévy payoff
+plot(density(levy.price),xlim=c(-5,10), main="Density Levy Price") # Lévy payoff (red line), GBM payoff (blue line) with respect to the null real payoff.
 abline(v=f(S[length(S)])) #black true payoff trajectory
 abline(v=p,col="red") #red levy payoff
 abline(v=p0,col="blue") #blue B&S payoff
