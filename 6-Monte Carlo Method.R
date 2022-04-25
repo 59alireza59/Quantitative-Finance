@@ -45,7 +45,7 @@ T<- 3/252 ## Option expired on the 07/09
 r<- 0.0019 ## 1 year USA t-bill rate
 sigma.hat <- 0.2423211 ## historical volatility
 
-## Load stock data
+## Load stock data from yahoo finance
 getSymbols("AXP", from="2018-02-01", to="2018-09-04")
 S <- AXP$AXP.Adjusted
 
