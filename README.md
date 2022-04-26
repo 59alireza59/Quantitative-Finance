@@ -10,7 +10,7 @@ This platform is programmed to demonstrate in practice which statistical concept
 
 1- Time Series Clustering
 
-This task propounds a clustering framework to draw the main features of the Johnson & Johnson’s stock exchange compared with its main competitors. To build the framework, a time series of daily closing quotes, from yahoo finance for two different sectors (Pharmaceutical/Healthcare/Biotechnology sector and Banking Services, have been considered from September 2017 to September 2018 for the following financial assets):
+This task propounds a clustering framework to draw the main features of the Johnson & Johnson’s stock exchange compared with its main competitors. To build the framework, a time series of daily closing quotes, from yahoo finance for two different sectors (Pharmaceutical / Healthcare / Biotechnology sector and Banking Services, have been considered from September 2017 to September 2018 for the following financial assets):
 - Pfizer (PFE);
 - Novartis (NVS);
 - Teva Pharmaceutical Industries Limited (TEVA);
