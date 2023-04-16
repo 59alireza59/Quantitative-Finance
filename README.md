@@ -1,8 +1,8 @@
 # Quantitative-Finance
-This Quantitative Finance Engineering Project contains Option Pricing and Estimation of Financial Models with R
+This Quantitative Finance Engineering project involves option pricing and estimation of financial models using R
 
 ## Abstract:
-This work programs an application of option pricing theory to real data computing different operations on stock and option prices. Despite the existence of some unacceptable assumptions in real leading to some weaknesses for the theory interpretation, this programming work attempts to present a valuable statistical framework with analytical perspective, instead. For doing this, different explorative techniques i.e. clustering and lead-laggards estimation were used to detect some similarities among famous companies in the financial services market, and correspondingly, it shows which of them likely is the market leader as well. Furthermore, this programming check if and how values corresponded to applications of the Black and Scholes model and the Monte Carlo method to price some options, diverge from corresponding market prices. Those values also let us to determine what the main reasons for this divergence are and based on which assumptions. Then, to figure out the best model that to interpret the path followed by the time series of the prices, the AIC method is hired considering some well-known models: Geometric Brownian motion (GBM), Vasicek (VAS), Cox–Ingersoll–Ross (CIR) and CKLS. Finally, a different method for option pricing, so-called the Lèvy market model is used. The main reason to select Lèvy market model is that the model takes into account all characteristics that lie outside of the standard Black and Scholes’ assumptions such as some typical feature of prices as jumps, changes in volatility and non-normality of returns.
+This project programmes an application of option pricing theory to real data, calculating various operations on stock and option prices. Despite the existence of some unacceptable assumptions in reality, which lead to some weaknesses in the theoretical interpretation, this programming work attempts instead to provide a valuable statistical framework with an analytical perspective. To this end, various exploratory techniques, such as clustering and lead-lagard estimation, have been used to identify some similarities between well-known firms in the financial services market and, accordingly, to show which of them is likely to be the market leader. The programme also checks whether and how the values obtained by using the Black and Scholes model and the Monte Carlo method to value some options differ from the corresponding market prices. These values also allow us to identify the main reasons for this divergence and the assumptions on which they are based. The AIC method is then used to find the best model for interpreting the path of the time series of prices, taking into account some well-known models: Geometric Brownian Motion (GBM), Vasicek (VAS), Cox-Ingersoll-Ross (CIR) and CKLS. Finally, another option pricing method, the Lèvy market model, is used. The main reason for choosing the Lèvy market model is that it takes into account all the features that lie outside the standard Black and Scholes assumptions, such as some typical price features such as jumps, changes in volatility and non-normality of returns.
 
 ## Intro:
 
@@ -10,7 +10,7 @@ This platform is programmed to demonstrate in practice which statistical concept
 
 1- Time Series Clustering
 
-This task propounds a clustering framework to draw the main features of the Johnson & Johnson’s stock exchange compared with its main competitors. To build the framework, a time series of daily closing quotes, from yahoo finance for two different sectors (Pharmaceutical / Healthcare / Biotechnology sector and Banking Services, have been considered from September 2017 to September 2018 for the following financial assets):
+This task propounds a clustering framework to draw the main features of the Johnson & Johnson’s stock exchange compared with its main competitors. To build the framework, we considered a time series of daily closing prices from Yahoo Finance for two different sectors (pharmaceutical/healthcare/biotechnology sector and banking services, from September 2017 to September 2018 for the following financial assets):
 - Pfizer (PFE);
 - Novartis (NVS);
 - Teva Pharmaceutical Industries Limited (TEVA);
@@ -25,11 +25,11 @@ This task propounds a clustering framework to draw the main features of the John
 
 2- Lead–lag Effect
 
-The lead–lag effect illustrates how the lagger price process tends to emulate the oscillations of the leader price process  relatively with some temporary delay, or vice versa. This task aims at exposing the main features between an American global investment management corporation so-called BlackRock and its competitors through correlation matrix calculation and the lead-lag estimation.
+The lead-lag effect illustrates how the lagging price process tends to mimic the fluctuations of the leading price process with a temporary lag, or vice versa. The aim of this assignment is to identify the main characteristics between an American global investment management company called BlackRock and its competitors by calculating correlation matrices and lead-lag estimation.
 
 3- Black–Scholes Test
 
-This task is an attempt to present a framework to check the validity of the assumptions of Black-Scholes model on sample components (ten Euro Area banks) over two different time horizons- a long-term one (ten years of daily stock prices and log-returns) and a short-term one (one year finishing on the 30th April 2015):
+This exercise is an attempt to provide a framework for checking the validity of the assumptions of the Black-Scholes model on sample components (ten euro area banks) over two different time horizons - a long-term one (ten years of daily share prices and logarithmic returns) and a short-term one (one year ending 30 April 2015):
 - Deutsche Bank (DBK.DE);
 - Commerzbank (CBK.DE);
 - BNP Paribas (BNP.PA);
@@ -43,16 +43,16 @@ This task is an attempt to present a framework to check the validity of the assu
 
 4- Change Point Detection
 
-This task is an attempt to check "whether the pattern of the Wells Fargo stock follows a Geometric Brownian Motion or not" due to detecting changes. Answering this question needs to check the both independency and normality of the log returns in the presence of Black & Scholes assumption.
+This exercise attempts to determine "whether or not the stock pattern of Wells Fargo follows a geometric Brownian motion" by detecting changes. In answering this question, both the independence and the normality of the logarithmic returns must be checked in the presence of the Black & Scholes assumption.
 
 5- Option Pricing
 
-This task represents a framework to compute option price using Black and Scholes formula and Monte Carlo simulation in which the first step requirement is to apply Changing Point Analysis over a rich financial time series dataset from Yahoo Finance (Johnson & Johnson stock prices). The changing point analysis helps to find when there is the volatility changes in data with respect to the length of the desired duration.
+This exercise presents a framework for option pricing using the Black and Scholes formula and Monte Carlo simulation, where the first requirement is to apply Changing Point Analysis to a rich financial time series dataset from Yahoo Finance (Johnson & Johnson stock prices). The Changing Point Analysis helps to identify when there is the volatility changes in the data relative to the length of the desired duration.
 
 6- Monte Carlo Method
 
-This task utilizes the Monte Carlo Method to compute option pricing for American Express Company (AXP) provided by Yahoo Finance. Basically, this method generates a random sample for the underlying assets in a risk neutral world by obtaining a set of different payoffs at time in order to calculate the mean of the sample finding an expected payoff. The advantage of such utilization is that any type of stochastic processes like GMB or other models can be implemented inside the Monte Carlo Model.
+This exercise uses the Monte Carlo method to calculate option prices for American Express Company (AXP), provided by Yahoo Finance. Basically, this method generates a random sample for the underlying assets in a risk-neutral world by obtaining a set of different payoffs at each point in time, and then calculating the average of the sample that finds an expected payoff. The advantage of this is that any type of stochastic process, such as GMB or other models, can be implemented within the Monte Carlo model.
 
 7- Levy Market Process
 
-Unlike the unrealistic assumptions used in the Black and Scholes model - the particular stochastic process (GBM) which lies below the stock prices, the normal distribution of the log-returns and the constant volatility - this task considers a different method so-called Lévy process where the distributions are not normal. Generally, Lévy process is defined by a family of processes wide enough to comprise a variety of well-known other stochastic processes. As a stochastic process, it can be defined by the sum of a jump process (the Poisson process) and a Brownian motion with drift characterizing by similar properties to those of the Brownian motion, with the relevant difference in the distribution of the increments, which are no more Gaussian. 
+In contrast to the unrealistic assumptions used in the Black & Scholes model - the particular stochastic process (GBM) underlying stock prices, the normal distribution of the log-returns and the constant volatility - this extract considers a an alternative method, the so-called Lévy process where the distributions are not normal. In general, the Lévy process is defined by a family of processes broad enough to include a variety of other well-known stochastic processes. As a stochastic process, it can be defined as the sum of a jump process (the Poisson process) and a Brownian motion with drift, characterised by similar properties to those of the Brownian motion, with the relevant difference that the distribution of the increments is no longer Gaussian. 
