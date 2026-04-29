@@ -84,3 +84,13 @@ This exercise uses the Monte Carlo method to calculate option prices for America
 7- Levy Market Process
 
 In contrast to the unrealistic assumptions used in the Black & Scholes model - the particular stochastic process (GBM) underlying stock prices, the normal distribution of the log-returns and the constant volatility - this extract considers a an alternative method, the so-called Lévy process where the distributions are not normal. In general, the Lévy process is defined by a family of processes broad enough to include a variety of other well-known stochastic processes. As a stochastic process, it can be defined as the sum of a jump process (the Poisson process) and a Brownian motion with drift, characterised by similar properties to those of the Brownian motion, with the relevant difference that the distribution of the increments is no longer Gaussian. 
+
+## Relevant Roles
+
+This project is relevant for:
+
+- Quantitative Analyst
+- Risk Analyst
+- Financial Data Scientist
+- Data Scientist
+- Business Analytics Consultant
