@@ -1,7 +1,35 @@
-# Quantitative-Finance
-This Quantitative Finance Engineering project involves option pricing and estimation of financial models using R
+# Quantitative Finance Analytics in R
 
-## Abstract:
+## Executive Summary
+
+This repository contains a set of quantitative finance projects using R to analyse financial time series, detect structural changes, estimate lead-lag relationships, test Black–Scholes assumptions, and price options using analytical and simulation-based methods.
+
+## Business Value
+
+The project demonstrates how statistical modelling and stochastic-process methods can support:
+
+- financial risk analysis
+- derivative pricing
+- volatility and regime-change detection
+- market-leader identification
+- model validation
+- investment research
+
+## Methods Used
+
+- Time-series clustering
+- Lead-lag correlation analysis
+- Black–Scholes model testing
+- Change-point detection
+- Monte Carlo option pricing
+- Lévy process modelling
+- AIC-based model comparison
+
+## Tools
+
+R, statistical modelling, time-series analysis, Monte Carlo simulation, financial data analysis.
+
+## Technical Details
 This project programms an application of option pricing theory to real data, calculating various operations on stock and option prices. Despite the existence of some unacceptable assumptions in reality, which lead to some weaknesses in the theoretical interpretation, this programming work attempts instead to provide a valuable statistical framework with an analytical perspective. To this end, various exploratory techniques, such as clustering and lead-laggard estimation, have been used to identify some similarities between well-known firms in the financial services market and, accordingly, to show which of them is likely to be the market leader. The program also checks whether and how the values obtained by using the Black and Scholes model and the Monte Carlo method to value some options differ from the corresponding market prices. These values also allow us to identify the main reasons for this divergence and the assumptions on which they are based. The AIC method is then used to find the best model for interpreting the path of the time series of prices, taking into account some well-known models: Geometric Brownian Motion (GBM), Vasicek (VAS), Cox-Ingersoll-Ross (CIR) and CKLS. Finally, another option pricing method, the Lèvy market model, is used. The main reason for choosing the Lèvy market model is that it takes into account all the features that lie outside the standard Black and Scholes assumptions, such as some typical price features such as jumps, changes in volatility and non-normality of returns.
 
 ## Intro:
